@@ -8,6 +8,7 @@ import (
 
 	"github.com/snassr/blog-0006-gomodules/pkg/lyrics"
 	"github.com/snassr/blog-0006-gomodules/pkg/sounds"
+	listener "github.com/snassr/blog-0006-listener"
 )
 
 func main() {
@@ -18,6 +19,7 @@ func main() {
 		for {
 			sounds.MakeSounds()
 			lyrics.WriteLryics()
+			listener.Listener()
 			time.Sleep(2 * time.Second)
 		}
 	}()
